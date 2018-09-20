@@ -28,10 +28,15 @@ class Posts extends Component {
 
 
     render() {
-        console.log(this.state.posts)
+        const postItems = this.state.posts.map(post => (
+            <div key={post.id}>
+            <h3>{post.title}</h3>
+            <p>{post.body}</p>
+            </div>
+        ));
         return (
             <div>
-                Posts home
+                {postItems}
             </div>
         );
     }
