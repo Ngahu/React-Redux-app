@@ -23,7 +23,11 @@ class PostForm extends Component {
     }
 
     onSubmit(e){
-        e.preventDefault();  
+        e.preventDefault(); 
+        this.setState({
+            title:'',
+            body:''
+        }) 
 
         const post = {
             title :this.state.title,
