@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+
+
+
+
 
 class PostForm extends Component {
     constructor(props) {
@@ -61,8 +64,5 @@ class PostForm extends Component {
     }
 }
 
-PostForm.propTypes = {
-
-};
 
 export default PostForm;
