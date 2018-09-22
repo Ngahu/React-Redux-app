@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
-
+import  { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createPost } from '../actions/PostActions';
 
 
 
@@ -36,6 +37,7 @@ class PostForm extends Component {
 
         
         //call action here 
+        this.props.createPost(post);
 
     }
 
@@ -62,4 +64,14 @@ class PostForm extends Component {
 }
 
 
-export default PostForm;
+
+PostForm.propTypes = {
+    createPost:PropTypes.func.isRequired
+    // posts:PropTypes.array.isRequired
+
+};
+
+
+
+
+export default connect(null, { createPost })(PostForm);
